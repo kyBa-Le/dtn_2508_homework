@@ -1,5 +1,7 @@
 use testing_system;
 
+-- INSERTION
+-- -----------
 -- Table 1
 INSERT INTO `department` (department_name) VALUES
 ('Marketing'),
@@ -136,3 +138,102 @@ INSERT INTO exam_question (exam_id, question_id) VALUES
 (9, 9),
 (10, 10);
 
+
+
+-- QUERY QUESTION
+-- -----------------
+
+
+-- Question 2
+SELECT * FROM department;
+
+-- Question 3
+SELECT department_id FROM department WHERE department_name = 'Sale';
+
+-- Question 4
+SELECT * FROM `account`
+WHERE (
+	CHAR_LENGTH(full_name) = (SELECT MAX(CHAR_LENGTH(full_name)) FROM `account`));
+    
+-- Question 5
+SELECT * FROM `account`
+WHERE (
+	CHAR_LENGTH(full_name) = (SELECT MAX(CHAR_LENGTH(full_name)) FROM `account` WHERE department_id = 3)
+);
+    
+-- Question 6
+SELECT 
+    group_name
+FROM
+    `group`
+WHERE
+    create_date < DATE('2019/12/20'); 
+    
+-- Question 7
+SELECT 
+    question_id
+FROM
+    answer
+GROUP BY question_id
+HAVING COUNT(*) >= 4;
+
+-- Question 8
+SELECT 
+    `code`
+FROM
+    exam
+WHERE
+    (duration >= 60
+        AND create_date < DATE('2019/12/20'));
+
+-- Question 9
+SELECT 
+    *
+FROM
+    `group`
+ORDER BY create_date DESC
+LIMIT 5;
+
+-- Question 10
+SELECT 
+    COUNT(*)
+FROM
+    `account`
+WHERE
+    department_id = 2
+GROUP BY department_id;
+
+-- Question 11
+SELECT 
+    *
+FROM
+    `account`
+WHERE
+    full_name LIKE 'D%o';
+    
+-- Question 12
+set SQL_SAFE_UPDATES = 0;
+
+DELETE FROM exam 
+WHERE
+    create_date < DATE('2019/12/20');
+
+set SQL_SAFE_UPDATES = 1;
+
+-- Question 13 (Because of the content is in English, I will adjust this question)
+DELETE FROM question WHERE content LIKE 'question%';
+
+-- Question 14 (Because of the content is in English, I will adjust the full_name)
+UPDATE `account` 
+SET 
+    full_name = 'Nguyen Ba Loc',
+    email = 'loc.nguyenba@vti.com.vn'
+WHERE
+    account_id = 5;
+
+-- Question 15
+UPDATE `group_account` 
+SET 
+    group_id = 4
+WHERE
+    account_id = 5;
