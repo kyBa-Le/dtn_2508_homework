@@ -26,9 +26,9 @@ HAVING COUNT(ga.group_id) = (
 
 -- Question 3: View - Questions with content longer than 300 words → then drop it
 CREATE OR REPLACE VIEW v_questions_too_long AS
-SELECT question_id, content, LENGTH(content) AS content_length
+SELECT question_id, content, CHAR_LENGTH(content) AS content_length
 FROM question
-WHERE LENGTH(content) - LENGTH(REPLACE(content, ' ', '')) + 1 > 300;
+WHERE CHAR_LENGTH(content) - CHAR_LENGTH(REPLACE(content, ' ', '')) + 1 > 300;
 
 DROP VIEW v_questions_too_long;
 
