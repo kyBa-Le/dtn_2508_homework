@@ -1,3 +1,5 @@
+package java_core.homework.assignment1;
+
 public class Position {
     private int positionId;
     private String positionName;

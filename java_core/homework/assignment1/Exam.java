@@ -1,3 +1,5 @@
+package java_core.homework.assignment1;
+
 public class Exam {
     private int examId;
     private String code;

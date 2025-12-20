@@ -1,3 +1,5 @@
+package java_core.homework.assignment1;
+
 public class Answer {
     private int answerId;
     private String content;

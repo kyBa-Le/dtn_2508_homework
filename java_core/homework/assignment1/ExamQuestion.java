@@ -1,3 +1,5 @@
+package java_core.homework.assignment1;
+
 public class ExamQuestion {
     private Exam exam;
     private Question question;

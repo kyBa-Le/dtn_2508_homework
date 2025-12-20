@@ -1,3 +1,5 @@
+package java_core.homework.assignment1;
+
 public class Department {
     private int departmentId;
     private String departmentName;

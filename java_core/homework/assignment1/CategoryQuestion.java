@@ -1,3 +1,5 @@
+package java_core.homework.assignment1;
+
 public class CategoryQuestion {
     private int categoryId;
     private String categoryName;

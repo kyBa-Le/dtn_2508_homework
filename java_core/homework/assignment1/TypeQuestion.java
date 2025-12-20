@@ -1,3 +1,5 @@
+package java_core.homework.assignment1;
+
 public class TypeQuestion {
     private int typeId;
     private String typeName;

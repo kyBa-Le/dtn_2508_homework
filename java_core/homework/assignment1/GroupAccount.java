@@ -1,3 +1,5 @@
+package java_core.homework.assignment1;
+
 public class GroupAccount {
     private Group group;
     private Account account;

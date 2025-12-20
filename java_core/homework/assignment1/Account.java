@@ -1,3 +1,5 @@
+package java_core.homework.assignment1;
+
 public class Account {
     private int accountId;
     private String email;
