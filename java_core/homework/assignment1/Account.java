@@ -78,4 +78,17 @@ public class Account {
     public void setCreateDate(java.sql.Date createDate) {
         this.createDate = createDate;
     }
+
+    @Override
+    public String toString() {
+        return "Email: " + email + ", " + "Full Name: " + fullName + ", " + "Department: " + department;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof Account a) {
+            return accountId == a.getAccountId();
+        }
+        return false;
+    }
 }
