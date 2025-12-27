@@ -1,4 +1,4 @@
-package java_core.homework.assignment1;
+package java_core.homework.assignment4.com.vti.entity;
 
 public class Department {
     private int departmentId;

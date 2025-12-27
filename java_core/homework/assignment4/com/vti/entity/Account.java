@@ -1,4 +1,4 @@
-package java_core.homework.assignment1;
+package java_core.homework.assignment4.com.vti.entity;
 
 import java.sql.Date;
 
@@ -9,7 +9,7 @@ public class Account {
     private String fullName;
     private Department department;
     private Position position;
-    private java.sql.Date createDate;
+    private Date createDate;
 
     public Account() {
         this.createDate = Date.valueOf(java.time.LocalDate.now());
@@ -25,7 +25,7 @@ public class Account {
     }
 
     public Account(int accountId, String email, String username, String fullName,
-            Department department, Position position, java.sql.Date createDate) {
+                   Department department, Position position, Date createDate) {
         this.accountId = accountId;
         this.email = email;
         this.username = username;
@@ -103,11 +103,11 @@ public class Account {
         this.position = position;
     }
 
-    public java.sql.Date getCreateDate() {
+    public Date getCreateDate() {
         return createDate;
     }
 
-    public void setCreateDate(java.sql.Date createDate) {
+    public void setCreateDate(Date createDate) {
         this.createDate = createDate;
     }
 

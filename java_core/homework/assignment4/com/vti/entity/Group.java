@@ -1,4 +1,4 @@
-package java_core.homework.assignment1;
+package java_core.homework.assignment4.com.vti.entity;
 
 import java.sql.Date;
 
@@ -7,7 +7,7 @@ public class Group {
     private String groupName;
     private Account creator;
     private Account[] accounts;
-    private java.sql.Date createDate;
+    private Date createDate;
 
     public Group() {
         this.createDate = Date.valueOf(java.time.LocalDate.now());
@@ -37,7 +37,7 @@ public class Group {
         }
     }
 
-    public Group(int groupId, String groupName, Account creator, java.sql.Date createDate) {
+    public Group(int groupId, String groupName, Account creator, Date createDate) {
         this.groupId = groupId;
         this.groupName = groupName;
         this.creator = creator;
@@ -68,11 +68,11 @@ public class Group {
         this.creator = creator;
     }
 
-    public java.sql.Date getCreateDate() {
+    public Date getCreateDate() {
         return createDate;
     }
 
-    public void setCreateDate(java.sql.Date createDate) {
+    public void setCreateDate(Date createDate) {
         this.createDate = createDate;
     }
 }
